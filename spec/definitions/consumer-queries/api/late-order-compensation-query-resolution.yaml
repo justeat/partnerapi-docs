@@ -1,0 +1,35 @@
+type: object
+properties:
+  orderId:
+    type: string
+    description: The Order ID that the compensation request relates to.
+  isAccepted:
+    type: boolean
+    description: Flag to indicate whether a compensation request has been accepted or rejected.
+  acceptedAmount:
+    type: integer
+    description: The monetary amount of late order compensation granted, in cents/pence. Required when isAccepted = true.
+  rejectedReasonCode:
+    type: string
+    enum:
+      - BadTraffic
+      - BadWeather
+      - BusierThanExpected
+      - CompensatedWithItem
+      - NoReason
+    description: >-
+
+      - BadTraffic : We gave you something from the menu free of charge to make up for it.
+
+      - BadWeather : The bad weather was delaying our deliveries, sorry.
+
+      - BusierThanExpected : The driver was stuck in heavy traffic, sorry.
+      
+      - CompensatedWithItem : Our restaurant was busier than we expected.
+
+      - NoReason : We're really sorry your order was late. We hope you enjoyed your food.
+      
+example:
+  OrderId: 6852741234
+  IsAccepted: true
+  AcceptedAmount: 500 

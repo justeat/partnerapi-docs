@@ -182,6 +182,10 @@ tags:
     x-displayName: Search API
   - name: logistics-pos-restaurants
     x-displayName: Restaurant API
+  - name: consumer-queries
+    x-displayName: Consumer Query API
+  - name: consumer-queries-webhooks
+    x-displayName: Consumer Query Webhooks   
 x-tagGroups:
   - name: Whitelabel
     tags:
@@ -206,3 +210,7 @@ x-tagGroups:
   - name: Logistics POS
     tags:
       - logistics-pos-restaurants
+  - name: Consumer Queries
+    tags:
+      - consumer-queries
+      - consumer-queries-webhooks
