@@ -1,0 +1,14 @@
+post:
+  tags:
+    - menu-webhooks
+  summary: Menu ingestion complete
+  description: "Callback to confirm that an attempt to ingest a menu has completed either successfully or unsuccessfully"
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "#/definitions/menu-ingestion-complete"
+  responses:
+    "200":
+      description: OK

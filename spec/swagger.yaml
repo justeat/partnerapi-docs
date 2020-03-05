@@ -187,7 +187,9 @@ tags:
   - name: consumer-queries
     x-displayName: Consumer Query API
   - name: consumer-queries-webhooks
-    x-displayName: Consumer Query Webhooks   
+    x-displayName: Consumer Query Webhooks
+  - name: menu-webhooks
+    x-displayName: Menu Webhooks
 x-tagGroups:
   - name: Whitelabel
     tags:
@@ -217,3 +219,6 @@ x-tagGroups:
     tags:
       - consumer-queries
       - consumer-queries-webhooks
+  - name: Menu
+    tags:
+      - menu-webhooks

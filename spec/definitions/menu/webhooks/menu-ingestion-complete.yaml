@@ -1,0 +1,55 @@
+type: object
+properties:
+  tenant:
+    type: string
+    description: Country code for the market the restaurant is in
+    format: enum
+    enum: [au, dk, es, ie, it, no, uk, nz]
+  restaurantId:
+    type: string
+    description: The Just Eat restaurant ID
+  timestamp:
+    type: string
+    description: The ISO-8601 datetime at which the menu ingestion completed
+    format: date-time
+  result:
+    type: string
+    description: The result of the menu ingestion process
+    format: enum
+    enum: [success, fail]
+  correlationId:
+    type: string
+    description: The ID of the execution which has been completed
+  fault:
+    type: object
+    description: Details of the fault which caused the menu ingestion to fail. This is only present if menu ingestion did not complete successfully
+    properties:
+      id:
+        type: string
+        description: A unique ID for the fault
+      errors:
+        type: array
+        description: Details of errors which caused the fault
+        items:
+          type: object
+          properties:
+            code:
+              type: string
+              description: An alphanumeric code for the error
+            description:
+              type: string
+              description: A description of the error to help you resolve the issue
+example:
+  tenant: "uk"
+  restaurantId: "123456"
+  timestamp: "2020-01-01T00:00:00Z"
+  result: "fail"
+  correlationId: "64bef5ee-7265-47f8-9aee-28bc74f00b13"
+  fault:
+    id: "70e307df-0156-4d3c-ab92-dd57a103350b"
+    errors:
+      - code: "123"
+        description: "Invalid variation: 15237d6c-c866-55da-9e61-b4f59dcab9ae - variations must be associated with at least one availability"
+      - code: "145"
+        description: "Invalid availability ID: menu-105369-availabilities - availability IDs must be integers"
+
