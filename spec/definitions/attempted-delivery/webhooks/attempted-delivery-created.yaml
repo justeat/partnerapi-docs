@@ -2,6 +2,8 @@ type: object
 properties:
   QueryId:
     type: string
+  OrderId:
+    type: string
   RestaurantId:
     type: number
   Reason:
@@ -10,6 +12,7 @@ properties:
     type: string
 example:
   QueryId: '123456'
+  OrderId: 'weoighroeghreuigerioughre'
   RestaurantId: '110230'
   Reason: 'Customer did not answer the door'
   Tenant: 'uk'
