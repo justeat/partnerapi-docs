@@ -31,3 +31,26 @@ post:
       description: Conflict - you've already told us about an order with this OrderReference
     '400':
       description: Request has failed validation in some way - see response body for details
+get:
+  tags:
+  - order-api
+  summary: "Get Order"
+  parameters:
+  - name: OrderId
+    in: path
+    required: true
+    schema:
+      type: string
+  responses:
+    '200':
+      description: Order exists and was retrieved successfully
+      content:
+        application/json:
+          schema:
+            "$ref": "#/definitions/orderstatusresponse"
+    '400':
+      description: Bad Request - Both the Tenant header and Order Id must be included in the request and cannot be null
+    '401':
+      description: Unauthorized - The Authorization token used isn't valid or doesn't allow you to perform this operation
+    '404':
+      description: NotFound - The OrderId requested does not exist

@@ -1,0 +1,23 @@
+type: object
+properties:
+    Discount:
+        type: integer
+        description: Total discount
+        format: decimal
+    Tips:
+        type: integer
+        description: Total tips
+        format: decimal
+    Taxes:
+        type: integer
+        description: Total taxes
+        format: decimal
+    Items:
+        type: integer
+        description: Total cost of items
+        format: decimal
+    FeeBreakdown:
+        type: object
+        description: Breakdown of order fees
+        $ref: >-
+            #/definitions/orderfeebreakdown

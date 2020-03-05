@@ -1,0 +1,18 @@
+type: object
+properties:
+    Method:
+        type: string
+        description: How the Order will be fulfilled (Collection, Delivery)
+    CustomerDueDate:
+        type: string
+        description: Due date of the order
+        format: date-time
+    CustomerDueASAP:
+        type: boolean
+        description: Order is due ASAP or not
+        format: date-time
+    Address:
+        type: object
+        description: Customer Address
+        $ref: >-
+            #/definitions/orderaddress

@@ -1,0 +1,18 @@
+type: object
+properties:
+    Lines:
+        type: array
+        description: List of address lines
+        items: 
+            type: string
+    City:
+        type: string
+        description: City
+    PostalCode:
+        type: string
+        description: Postcode
+    Geolocation:
+        type: Object
+        description: Address location by latitude and longitude
+        $ref: >-
+            #/definitions/addressgeolocation

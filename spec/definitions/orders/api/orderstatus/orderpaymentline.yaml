@@ -1,0 +1,12 @@
+type: object
+properties:
+    Type:
+        type: string
+        description: The type of payment, e.g. cash, card, accountcredit, voucher
+    Value:
+        type: integer
+        description: The value of the payment
+        format: decimal
+    Paid:
+        type: boolean
+        description: Whether or not the payment of this type has already been paid

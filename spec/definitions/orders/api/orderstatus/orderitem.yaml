@@ -1,0 +1,24 @@
+type: object
+properties:
+    Reference:
+        type: string
+        description: Order item Reference
+    Name:
+        type: string
+        description: Order item name
+    Synonym:
+        type: string
+        description: Order item Synonym
+    UnitPrice:
+        type: integer
+        description: Unit price of order item
+        format: decimal
+    Quantity:
+        type: integer
+        description: Quantity of item
+    Items:
+        type: array
+        description: Items in this order item
+        items:
+            $ref: >-
+              #/definitions/orderitem

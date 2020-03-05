@@ -1,0 +1,19 @@
+type: object
+properties:
+    Reference:
+        type: string
+        description: Restaurant Id
+    Name:
+        type: string
+        description: Name of the Restaurant
+    Address:
+        type: object
+        description: Address of Restaurant
+        $ref: >-
+            #/definitions/address
+    TimeZone:
+        type: string
+        description: Restaurant time time zone
+    PhoneNumber:
+        type: string
+        description: Phone number of Restaurant

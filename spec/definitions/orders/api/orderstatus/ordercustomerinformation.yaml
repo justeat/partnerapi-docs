@@ -1,0 +1,8 @@
+type: object
+properties:
+    Id:
+        type: integer
+        description: Id of customer
+    Name:
+        type: string
+        description: Customer name

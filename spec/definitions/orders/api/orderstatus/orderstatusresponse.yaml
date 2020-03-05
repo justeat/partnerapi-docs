@@ -1,0 +1,13 @@
+type: object
+properties:
+    Id:
+        type: string
+        description: Order Id
+    Status:
+        type: string
+        description: Status of the Order
+    Details:
+        type: object
+        description: Object containing Order details
+        $ref: >-
+            #/definitions/orderdetails

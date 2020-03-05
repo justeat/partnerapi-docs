@@ -1,0 +1,14 @@
+type: object
+properties:
+    Delivery:
+        type: integer
+        description: Total delivery fee
+        format: decimal
+    ServiceCharge:
+        type: integer
+        description: Total service charge
+        format: decimal
+    Other:
+        type: integer
+        description: Other fees
+        format: decimal

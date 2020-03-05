@@ -1,0 +1,10 @@
+type: object
+properties:
+    Latitude:
+        type: number
+        description: Latitude
+        format: double
+    Longitude:
+        type: number
+        description: Longitude
+        format: double

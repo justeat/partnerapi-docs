@@ -1,0 +1,61 @@
+type: object
+properties:
+    OrderId:
+        type: string
+        description: Order Id
+    FriendlyOrderReference:
+        type: string
+        description: Friendly Order Reference
+    Currency:
+        type: string
+        description: The currency of the Order
+    TotalPrice:
+        type: number
+        description: Total price of the Order
+        format: double
+    Fulfilment:
+        type: object
+        description: Order fulfilment information
+        $ref: >-
+            #/definitions/orderfulfilment
+    PhoneNumber:
+        type: string
+        description: Customer phone number
+    PreparationTime:
+        type: string
+        description: Preparation time for order
+    Payment:
+        type: object
+        description: Order fulfilment information
+        $ref: >-
+            #/definitions/orderpayment
+    Customer:
+        type: object
+        description: Customer information
+        $ref: >-
+            #/definitions/ordercustomerinformation
+    Items:
+        type: array
+        description: List of order (basket) Items
+        items:
+            $ref: >-
+              #/definitions/orderitems
+    PriceBreakdown:
+        type: object
+        description: Price breakdown of this order
+        $ref: >-
+            #/definitions/orderpricebreakdown
+    CustomerNotes:
+        type: object
+        description: Dictionary of customer notes for Restaurant
+    PlacedDate:
+        type: string
+        description: DateTime for the order Placed Date
+    Restaurant:
+        type: object
+        description: Restaurant metadata
+        $ref: >-
+            #/definitions/orderrestaurantdetails
+    IsTest:
+        type: boolean
+        description: Whether Restaurant is a test restaurant
