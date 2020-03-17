@@ -19,6 +19,10 @@ properties:
           - Collection
       PhoneNumber:
         type: string
+        description: "Customer phone number (will be phone masking number if enabled)"
+      PhoneMaskingCode:
+        type: string
+        description: "Code to use when calling customer phone masking number about this order. null if phone masking not enabled"
       CustomerDueDate:
         format: date-time
         type: string
@@ -118,6 +122,7 @@ example:
   Fulfilment:
     Method: Delivery
     PhoneNumber: '+441234567890'
+    PhoneMaskingCode: '9999999'
     CustomerDueDate: '2018-03-10T14:45:28Z'
     CustomerDueAsap: false
     Address:
